@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Meu Blog{% endblock %}</title>
+</head>
+<body>
+
+  <header>
+    <h1> Blog Django do Jeffinho</h1>
+
+    <nav>
+      <a href="{% url 'home' %}">Home</a> |
+      <a href="{% url 'criar_autor' %}">Novo Autor</a> |
+      <a href="{% url 'criar_categoria' %}">Nova Categoria</a> |
+      <a href="{% url 'criar_post' %}">Novo Post</a> |
+      <a href="{% url 'buscar_posts' %}">Buscar</a>
+    </nav>
+
+    <hr />
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <hr />
+  <footer>
+    <small>Feito no Django </small>
+  </footer>
+
+</body>
+</html>

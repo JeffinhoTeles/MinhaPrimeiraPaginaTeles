@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block title %}Nova Categoria{% endblock %}
+
+{% block content %}
+<h2>Cadastrar Categoria</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %}

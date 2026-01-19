@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h2>Últimos Posts</h2>
+
+  {% for post in posts %}
+    <article>
+      <h3>{{ post.titulo }}</h3>
+      <p>
+        <b>Autor:</b> {{ post.autor }}
+        | <b>Categoria:</b> {{ post.categoria }}
+      </p>
+      <p>{{ post.conteudo }}</p>
+      <small>Criado em: {{ post.criado_em }}</small>
+      <hr />
+    </article>
+  {% empty %}
+    <p>Nenhum post cadastrado ainda </p>
+  {% endfor %}
+{% endblock %}

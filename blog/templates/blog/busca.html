@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% block title %}Buscar Posts{% endblock %}
+
+{% block content %}
+<h2>Buscar Posts</h2>
+
+<form method="GET">
+  {{ form.as_p }}
+  <button type="submit">Buscar</button>
+</form>
+
+<hr />
+
+{% if posts %}
+  <h3>Resultados:</h3>
+  {% for post in posts %}
+    <p>✅ <b>{{ post.titulo }}</b> - {{ post.autor }}</p>
+  {% endfor %}
+{% else %}
+  <p>Nenhum resultado ainda </p>
+{% endif %}
+{% endblock %}
