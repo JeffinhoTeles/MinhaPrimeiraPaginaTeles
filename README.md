@@ -1,4 +1,4 @@
-# SuaPrimeiraPaginaTeles
+# MinhaPrimeiraPaginaTeles
 
 Projeto Web desenvolvido em **Django** seguindo o padrão **MVT (Model - View - Template)**.
 
